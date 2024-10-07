@@ -64,3 +64,20 @@ const company = {
         ]
     };
     console.log(company);
+
+    //Task 2: Create a Recursive Function to Calculate Total Salary for a Department
+
+    function calculateDepartmentSalary(departmentName) {
+        let totalDepartmentSalaru=employee.salary;
+        for (let subordinate of employee.subordinates)
+            totalDepartmentSalary += calculateDepartmentSalary(subordinate);
+    }
+    return totalDepartmentSalary;
+    };
+    const totalCustomerServiceSalary= calculateDepartmentSalary("Customer Service");
+    const totalMarketingSalary= calculateDepartmentSalary("Marketing");
+    const totalITSalary= calculateDepartmentSalary("IT");
+
+    console.log(totalCustomerServiceSalary);
+    console.log(totalMarketingSalary);
+    console.log(totalCustomerServiceSalary);
